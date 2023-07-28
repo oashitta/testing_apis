@@ -1,4 +1,3 @@
-require('dotenv').config();
 
 // using cors (cross origin resource sharing - browsers restrict HTTP requests to outside sources and this is supposed to get around that. )
 const searchInput = document.getElementById('searchInput');
@@ -7,7 +6,7 @@ const errorMsg = document.getElementById('errorMsg')
 const button = document.getElementById('search')
 
 function fetchGif(searchRequest){
-  const apiKey = process.env.API_KEY //use API Key from.env
+  const apiKey = '7Wg84ZlMy7JZOxO7pynvCl7ziNhpMK8p'
   const url = `https://api.giphy.com/v1/gifs/translate?api_key=${apiKey}&s=${searchRequest}`;
   
   fetch(url, {mode: 'cors'})
